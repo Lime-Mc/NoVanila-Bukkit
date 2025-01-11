@@ -1,0 +1,9 @@
+name: NoVanila
+version: '1.0.0'
+main: me.lime.noVanila.NoVanila
+api-version: '1.20.6'
+prefix: NoVanila
+load: STARTUP
+authors:
+  - Lime
+description: Plugin for edit tab, join and leave messages, chat style
