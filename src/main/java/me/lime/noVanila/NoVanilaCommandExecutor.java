@@ -16,11 +16,9 @@ public class NoVanilaCommandExecutor implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-        if (cmd.getName().equalsIgnoreCase("nv") && sender.hasPermission("nv.admin")) {
-            if (args[0].equals("reload")) {
-                plugin.reloadConfig();
-            }
-            return false;
+        if (cmd.getName().equalsIgnoreCase("nv_reload") && sender.hasPermission("nv.admin")) {
+            plugin.reloadConfig();
+            return true;
         }
         if (cmd.getName().equalsIgnoreCase("bc") && sender.hasPermission("nv.bc")) {
                 if (args.length != 0) {
@@ -29,7 +27,7 @@ public class NoVanilaCommandExecutor implements CommandExecutor {
                         message = String.valueOf(message) + arg + " ";
                     }
                     message = ChatColor.translateAlternateColorCodes('&', message);
-                    Bukkit.broadcastMessage(sender.getName() + "говорит:" + message);
+                    Bukkit.broadcastMessage(sender.getName() + " говорит: " + message);
                     return true;
                 }
                 return false;

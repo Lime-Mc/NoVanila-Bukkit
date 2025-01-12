@@ -12,7 +12,11 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import java.util.Objects;
 
 public class MainChatListener implements Listener {
-    private NoVanila plugin;
+    private final NoVanila plugin;
+
+    public MainChatListener(NoVanila plugin) {
+        this.plugin = plugin;
+    }
 
     @EventHandler
     public void onChat(AsyncChatEvent event) {

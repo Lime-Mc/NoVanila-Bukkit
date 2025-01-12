@@ -1,5 +1,5 @@
 name: NoVanila
-version: '1.0.1'
+version: '1.0.0'
 main: me.lime.noVanila.NoVanila
 api-version: '1.20.6'
 
@@ -11,10 +11,10 @@ authors:
 description: Plugin for edit tab, join and leave messages, chat style
 
 commands:
-  nv:
+  nv_reload:
     description: NoVanila commands
     permission: nv.admin
-    usage: /nv reload - reload plugin, /bc [message] - broadcast message
+    usage: /nv_reload - reload plugin, /bc [message] - broadcast message
   bc:
     description: Broadcast message
     permission: nv.bc

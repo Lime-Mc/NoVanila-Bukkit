@@ -10,21 +10,29 @@ import java.util.logging.Logger;
 
 public class NoVanila extends JavaPlugin {
 
-    private static NoVanila instance;
+    public static NoVanila instance;
     private final Logger log = this.getLogger();
     protected FileConfiguration config;
 
     @Override
     public void onEnable() {
+        instance = this;
         log.info("Plugin is enabled!");
+        saveDefaultConfig();
         config = getConfig();
         NoVanilaCommandExecutor commandExecutor = new NoVanilaCommandExecutor(this);
         Objects.requireNonNull(getCommand("nv")).setExecutor(commandExecutor);
-        Bukkit.getPluginManager().registerEvents(new MainChatListener(), this);
+        Objects.requireNonNull(getCommand("bc")).setExecutor(commandExecutor);
+        Bukkit.getPluginManager().registerEvents(new MainChatListener(instance), this);
     }
 
     @Override
     public void onDisable() {
+        saveConfig();
         log.info("Plugin is disabled!");
+    }
+
+    public static NoVanila getInstance() {
+        return instance;
     }
 }
