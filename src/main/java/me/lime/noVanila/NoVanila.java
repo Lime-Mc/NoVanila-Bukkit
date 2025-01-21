@@ -12,16 +12,15 @@ public class NoVanila extends JavaPlugin {
 
     public static NoVanila instance;
     private final Logger log = this.getLogger();
-    protected FileConfiguration config;
+    protected FileConfiguration config = getConfig();;
 
     @Override
     public void onEnable() {
         instance = this;
-        log.info("Plugin is enabled!");
+        log.info("&2Plugin is enabled!");
         saveDefaultConfig();
-        config = getConfig();
         NoVanilaCommandExecutor commandExecutor = new NoVanilaCommandExecutor(this);
-        Objects.requireNonNull(getCommand("nv")).setExecutor(commandExecutor);
+        Objects.requireNonNull(getCommand("nv_reload")).setExecutor(commandExecutor);
         Objects.requireNonNull(getCommand("bc")).setExecutor(commandExecutor);
         Bukkit.getPluginManager().registerEvents(new MainChatListener(instance), this);
     }
@@ -29,7 +28,7 @@ public class NoVanila extends JavaPlugin {
     @Override
     public void onDisable() {
         saveConfig();
-        log.info("Plugin is disabled!");
+        log.info("&2Plugin is disabled!");
     }
 
     public static NoVanila getInstance() {

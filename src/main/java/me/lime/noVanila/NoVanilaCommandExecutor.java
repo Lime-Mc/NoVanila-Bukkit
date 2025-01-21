@@ -18,6 +18,7 @@ public class NoVanilaCommandExecutor implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
         if (cmd.getName().equalsIgnoreCase("nv_reload") && sender.hasPermission("nv.admin")) {
             plugin.reloadConfig();
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&Plugin reloaded!"));
             return true;
         }
         if (cmd.getName().equalsIgnoreCase("bc") && sender.hasPermission("nv.bc")) {

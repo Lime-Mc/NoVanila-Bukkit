@@ -4,7 +4,6 @@ chat:
   nickname_color: "#31adc9"
   separator: " > "
   separator_color: "#ffffff"
-  message_color: "#ffffff"
 
 # join messages - [+] player
 join:
@@ -15,23 +14,3 @@ join:
 leave:
   enabled: true
   minus_color: "#ff162a"
-
-# what players see when they press TAB
-# NOT WORKING NOW!!!
-tab:
-  enabled: true
-  title: Server
-  title_color: 1
-  description: Hello!
-  description_color: 1
-
-# if you change this - nothing, it is just for you, to see permissions
-# commands:
-#   nv:
-#     description: NoVanila commands
-#     permission: nv.admin
-#     usage: /nv reload - reload plugin, /bc [message] - broadcast message
-#   bc:
-#     description: Broadcast message
-#     permission: nv.bc
-#     usage: /nv reload - reload plugin, /bc [message] - broadcast message
