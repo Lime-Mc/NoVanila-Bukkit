@@ -1,7 +1,7 @@
 name: NoVanila
 version: '1.0.0'
 main: me.lime.noVanila.NoVanila
-api-version: '1.20.6'
+api-version: '1.21'
 
 prefix: NoVanila
 load: STARTUP
@@ -12,7 +12,7 @@ description: Plugin for edit tab, join and leave messages, chat style
 
 commands:
   nv_reload:
-    description: NoVanila commands
+    description: Reload config
     permission: nv.admin
     usage: /nv_reload - reload plugin, /bc [message] - broadcast message
   bc:

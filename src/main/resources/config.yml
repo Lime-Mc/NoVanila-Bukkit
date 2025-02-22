@@ -4,6 +4,7 @@ chat:
   nickname_color: "#31adc9"
   separator: " > "
   separator_color: "#ffffff"
+  message_color: "#ffffff"
 
 # join messages - [+] player
 join:
