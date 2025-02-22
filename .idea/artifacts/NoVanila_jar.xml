@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="NoVanila:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/NoVanila_jar</output-path>
-    <root id="archive" name="NoVanila.jar">
-      <element id="module-output" name="NoVanila.main" />
-    </root>
-  </artifact>
-</component>
